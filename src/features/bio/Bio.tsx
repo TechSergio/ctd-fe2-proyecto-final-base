@@ -3,22 +3,19 @@ import { NombresSimpsons, INFO_SIMPSONS } from "./constants";
 import styles from "./styles.module.css";
 
 const Bio = () => {
-  const [bioActiva, setBioActiva] = useState(
-    INFO_SIMPSONS[NombresSimpsons.BART]
-  );
+  const [bioActiva, setBioActiva] = useState(INFO_SIMPSONS[NombresSimpsons.BART]);
 
-  const onClick: (nombre: NombresSimpsons) => void = (nombre) =>
-    setBioActiva(INFO_SIMPSONS[nombre]);
+  const onClick = (nombre: NombresSimpsons) => setBioActiva(INFO_SIMPSONS[nombre]);
 
   const crearBotones = () => {
-    return Object.keys(INFO_SIMPSONS).map((nombre: string) => (
+    return Object.keys(INFO_SIMPSONS).map((nombre) => (
       <button
-        key={nombre as string}
+        key={nombre}
         onClick={() => onClick(nombre as NombresSimpsons)}
         className={
           bioActiva.id === nombre
-            ? styles.botonBioActivo
-            : styles.botonBioInactivo
+            ? `${styles.botonBio} ${styles.botonBioActivo}`
+            : `${styles.botonBio} ${styles.botonBioInactivo}`
         }
       >
         {nombre}

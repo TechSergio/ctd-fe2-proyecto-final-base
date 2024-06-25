@@ -33,7 +33,7 @@
   margin-bottom: 1rem;
 }
 
-.botonBioActivo {
+.botonBio {
   border-radius: 5px;
   border: 1px solid darkgray;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -41,24 +41,21 @@
   margin: 1rem;
   font-family: "Homer Simpson Revised", sans-serif;
   font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.botonBioActivo {
   background-color: #fdd835;
   color: whitesmoke;
-  text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000,
-    -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000,
-    -2px 0px 0 #000000, 0px -2px 0 #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border: 2px solid #000000;
+  border-radius: 10px;
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
 }
+
 
 .botonBioInactivo {
-  border-radius: 5px;
-  border: 1px solid darkgray;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  padding: 1rem;
-  margin: 1rem;
-  font-family: "Homer Simpson Revised", sans-serif;
-  font-size: 1.4rem;
-}
-
-.botonBioActivo:hover,
-.botonBioInactivo:hover {
-  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
 }

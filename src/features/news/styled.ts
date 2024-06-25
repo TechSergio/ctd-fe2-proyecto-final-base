@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { IBotonLectura, IBotonSuscribir, ICloseButtonProps, IImagenModal, IImagenTarjetaNoticia } from "./types";
 
 export const ContenedorNoticias = styled.div`
   display: flex;
@@ -54,7 +55,7 @@ export const TarjetaNoticia = styled.div`
   }
 `;
 
-export const ImagenTarjetaNoticia = styled.img`
+export const ImagenTarjetaNoticia = styled.img<IImagenTarjetaNoticia>`
   width: 100%;
   height: 40%;
   object-fit: cover;
@@ -85,7 +86,7 @@ export const FechaTarjetaNoticia = styled.p`
   text-align: right;
 `;
 
-export const BotonLectura = styled.button`
+export const BotonLectura = styled.button<IBotonLectura>`
   width: 100%;
   border: none;
   color: #fff;
@@ -138,7 +139,7 @@ export const TarjetaModal = styled.div`
   position: relative;
 `;
 
-export const CloseButton = styled.button`
+export const CloseButton = styled.button<ICloseButtonProps>`
   width: 20px;
   height: 20px;
   padding: 0;
@@ -157,7 +158,7 @@ export const CloseButton = styled.button`
   }
 `;
 
-export const ImagenModal = styled.img`
+export const ImagenModal = styled.img<IImagenModal>`
   width: 60%;
   height: 100%;
 `;
@@ -193,7 +194,7 @@ export const DescripcionModal = styled.p`
   overflow-y: auto;
 `;
 
-export const BotonSuscribir = styled.button`
+export const BotonSuscribir = styled.button<IBotonSuscribir>`
   width: 20%;
   min-width: 200px;
   border: none;
